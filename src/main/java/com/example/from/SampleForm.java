@@ -2,7 +2,7 @@ package com.example.from;
 
 public class SampleForm {
 	private String name;
-	private String boloodType;
+	private String bloodType;
 	
 	public String getName() {
 		return name;
