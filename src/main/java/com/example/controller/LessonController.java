@@ -54,8 +54,8 @@ public class LessonController {
 	}
 
 	@GetMapping("/") //08の例文
-	public String test(@RequestParam("name") String name) {
-
+	public String test(@RequestParam(value = "name", required = false, defaultValue = "名無し") String name) {
+		
 	}
 
 }
