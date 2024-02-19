@@ -36,11 +36,11 @@ public class LessonController {
 		return "名前:" + name + "<br>血液型: " + bloodType;
 	}
 
-	@GetMapping("/form_test")
+	/*@GetMapping("/form_test")
 	public String formTest(SampleForm sampleForm, Model model) {
 		model.addAttribute("SampleForm", sampleForm);
 		return "lesson/form_test";
-	}
+	}*/
 
 	@PostMapping("/request_test") //05の例文
 	@ResponseBody
