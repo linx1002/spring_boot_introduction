@@ -28,4 +28,8 @@ public class EmployeeService {
         Employee employee = optionalEmployee.get();
         return employee;
     }
+    
+    public List<Employee> findByName(String name) {
+        return this.employeeRepository.findByName(name);
+    }
 }
