@@ -32,4 +32,23 @@ public class EmployeeService {
     public List<Employee> findByName(String name) {
         return this.employeeRepository.findByName(name);
     }
+    
+    public Employee insert(String name, String department) {
+        Employee employee = new Employee();
+
+        employee.setName(name);
+        employee.setDepartment(department);
+
+        return this.employeeRepository.save(employee);
+    }
+    
+    public Employee update(Integer employeeId, String name, String department) {
+        Optional<Employee> optionalEmployee = this.employeeRepository.findById(employeeId);
+        Employee employee = optionalEmployee.get();
+
+        employee.setName(name);
+        employee.setDepartment(department);
+
+        return this.employeeRepository.save(employee);
+     }
 }
