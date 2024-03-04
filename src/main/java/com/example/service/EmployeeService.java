@@ -51,4 +51,8 @@ public class EmployeeService {
 
         return this.employeeRepository.save(employee);
      }
+    
+    public void delete(Integer id) {
+        this.employeeRepository.deleteById(id);
+    }
 }

@@ -59,5 +59,11 @@ public class EmployeeController {
         this.employeeService.update(employeeId, name, department);
         return "redirect:/employee/list";
     }
+    
+    @GetMapping("/delete/{employeeId}")
+    public String deleteEmployee(@PathVariable Integer employeeId) {
+        this.employeeService.delete(employeeId);
+        return "redirect:/employee/list";
+    }
 
 }
